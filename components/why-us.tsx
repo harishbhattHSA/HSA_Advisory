@@ -29,7 +29,7 @@ const differentiators = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="py-24 lg:py-32 bg-[#fafaf8]">
+    <section id="why-us" className="py-24 lg:py-32 bg-[color:var(--background)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Content */}
@@ -39,11 +39,11 @@ export function WhyUs() {
                 <span className="w-10 h-px bg-[#c9a45c]" />
                 <span className="text-sm font-semibold text-[#c9a45c] uppercase tracking-widest">Why Choose HSACA</span>
               </div>
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-[#1a3a5c] leading-tight text-balance">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-white leading-tight text-balance">
                 A Partner You Can Trust
               </h2>
             </div>
-            <p className="text-lg text-[#1a3a5c]/60 leading-relaxed">
+            <p className="text-lg text-white/70 leading-relaxed">
               We understand that choosing an advisory partner is a significant decision. Here&apos;s what sets HSACA apart and why businesses trust us with their growth journey.
             </p>
           </div>
@@ -53,15 +53,15 @@ export function WhyUs() {
             {differentiators.map((item, index) => (
               <div
                 key={index}
-                className="group p-6 bg-white rounded-xl border border-[#1a3a5c]/8 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
+                className="group p-6 bg-[color:var(--card)] rounded-xl border border-white/10 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-0.5 w-6 h-6 flex items-center justify-center rounded-full bg-[#1a3a5c] text-[#c9a45c]">
                     <Check className="h-3.5 w-3.5" strokeWidth={3} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#1a3a5c] mb-2">{item.title}</h3>
-                    <p className="text-sm text-[#1a3a5c]/60 leading-relaxed">{item.description}</p>
+                    <h3 className="font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-sm text-white/70 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </div>

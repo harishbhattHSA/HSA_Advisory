@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { 
   Briefcase, 
   PieChart, 
@@ -54,8 +55,18 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-[#fafaf8]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 lg:py-32 bg-gradient-to-b from-[#0b1e36] via-[#0f2a47] to-[#122f4f] relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hsacaservices.png"
+          alt="HSACA Services Background"
+          fill
+          className="object-contain object-center opacity-25"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -63,10 +74,10 @@ export function Services() {
             <span className="text-sm font-semibold text-[#c9a45c] uppercase tracking-widest">Our Services</span>
             <span className="w-10 h-px bg-[#c9a45c]" />
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-[#1a3a5c] text-balance">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-white text-balance">
             Comprehensive Advisory Solutions
           </h2>
-          <p className="mt-5 text-lg text-[#1a3a5c]/60">
+          <p className="mt-5 text-lg text-white/70">
             From strategic planning to operational excellence, we provide the guidance your business needs to thrive.
           </p>
         </div>
@@ -76,7 +87,7 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white p-7 rounded-xl border border-[#1a3a5c]/8 hover:border-[#c9a45c]/40 hover:shadow-xl transition-all duration-300"
+              className="group relative bg-[color:var(--card)] p-7 rounded-xl border border-white/10 hover:border-[#c9a45c]/40 hover:shadow-xl transition-all duration-300"
             >
               {/* Gold accent line on top */}
               <div className="absolute top-0 left-6 right-6 h-0.5 bg-[#c9a45c] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
@@ -84,8 +95,8 @@ export function Services() {
               <div className="mb-5 w-14 h-14 flex items-center justify-center rounded-xl bg-[#1a3a5c] text-[#c9a45c] group-hover:bg-[#c9a45c] group-hover:text-[#1a3a5c] transition-all duration-300 shadow-sm">
                 <service.icon className="h-7 w-7" />
               </div>
-              <h3 className="text-lg font-semibold text-[#1a3a5c] mb-3">{service.title}</h3>
-              <p className="text-sm text-[#1a3a5c]/60 leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
+              <p className="text-sm text-white/70 leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

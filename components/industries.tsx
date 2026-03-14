@@ -42,7 +42,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section id="industries" className="py-24 lg:py-32 bg-white">
+    <section id="industries" className="py-24 lg:py-32 bg-[color:var(--background)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -51,10 +51,10 @@ export function Industries() {
             <span className="text-sm font-semibold text-[#c9a45c] uppercase tracking-widest">Who We Serve</span>
             <span className="w-10 h-px bg-[#c9a45c]" />
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-[#1a3a5c] text-balance">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-white text-balance">
             Industries & Clients
           </h2>
-          <p className="mt-5 text-lg text-[#1a3a5c]/60">
+          <p className="mt-5 text-lg text-white/70">
             We work across diverse sectors, bringing tailored solutions to businesses at every stage of growth.
           </p>
         </div>
@@ -64,14 +64,14 @@ export function Industries() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="group flex items-start gap-5 p-6 bg-[#fafaf8] rounded-xl border border-[#1a3a5c]/8 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
+              className="group flex items-start gap-5 p-6 bg-[color:var(--card)] rounded-xl border border-white/10 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#1a3a5c] text-[#c9a45c] group-hover:bg-[#c9a45c] group-hover:text-[#1a3a5c] transition-all duration-300 shadow-sm">
                 <industry.icon className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#1a3a5c] mb-1">{industry.title}</h3>
-                <p className="text-sm text-[#1a3a5c]/60">{industry.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-1">{industry.title}</h3>
+                <p className="text-sm text-white/70">{industry.description}</p>
               </div>
             </div>
           ))}

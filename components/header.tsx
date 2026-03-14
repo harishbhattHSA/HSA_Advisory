@@ -30,7 +30,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/98 backdrop-blur-md shadow-sm border-b border-[#1a3a5c]/10"
+          ? "bg-[color:var(--background)]/90 backdrop-blur-md shadow-sm border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -39,7 +39,7 @@ export function Header() {
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2">
             <span className={`text-lg lg:text-xl font-semibold tracking-tight transition-colors ${
-              isScrolled ? "text-[#1a3a5c]" : "text-white"
+              isScrolled ? "text-white" : "text-white"
             }`}>
               HSACA <span className="hidden sm:inline">Business Advisory</span>
             </span>
@@ -53,7 +53,7 @@ export function Header() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   isScrolled 
-                    ? "text-[#1a3a5c]/80 hover:text-[#c9a45c]" 
+                    ? "text-white/90 hover:text-[#c9a45c]" 
                     : "text-white/90 hover:text-[#c9a45c]"
                 }`}
               >
@@ -66,11 +66,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Button 
               asChild 
-              className={`font-semibold transition-all ${
-                isScrolled 
-                  ? "bg-[#1a3a5c] hover:bg-[#0f2744] text-white" 
-                  : "bg-[#c9a45c] hover:bg-[#b8944d] text-[#0f2744]"
-              }`}
+              className="font-semibold transition-all bg-[#c9a45c] hover:bg-[#b8944d] text-[#0f2744]"
             >
               <Link href="#contact">Book a Consultation</Link>
             </Button>
@@ -91,19 +87,19 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-[#1a3a5c]/10 shadow-lg">
+        <div className="lg:hidden bg-[color:var(--background)] border-t border-white/10 shadow-lg">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="py-3 px-3 text-sm font-medium text-[#1a3a5c]/80 hover:text-[#c9a45c] hover:bg-[#1a3a5c]/5 rounded-lg transition-colors"
+                className="py-3 px-3 text-sm font-medium text-white/80 hover:text-[#c9a45c] hover:bg-white/5 rounded-lg transition-colors"
               >
                 {link.label}
               </Link>
             ))}
-            <Button asChild className="mt-4 bg-[#1a3a5c] hover:bg-[#0f2744] text-white">
+            <Button asChild className="mt-4 bg-[#c9a45c] hover:bg-[#b8944d] text-[#0f2744]">
               <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                 Book a Consultation
               </Link>

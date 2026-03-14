@@ -21,7 +21,7 @@ const highlights = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 lg:py-32 bg-[color:var(--background)] relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -42,11 +42,11 @@ export function About() {
                 <span className="w-10 h-px bg-[#c9a45c]" />
                 <span className="text-sm font-semibold text-[#c9a45c] uppercase tracking-widest">About HSACA</span>
               </div>
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-[#1a3a5c] leading-tight text-balance">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold text-white leading-tight text-balance">
                 Your Reliable Advisory Partner for Structured Growth
               </h2>
             </div>
-            <div className="space-y-5 text-[#1a3a5c]/70 leading-relaxed text-lg">
+            <div className="space-y-5 text-white/70 leading-relaxed text-lg">
               <p>
                 HSACA Business Advisory Pvt. Ltd. is a professional advisory firm committed to helping businesses navigate complexity with confidence. We partner with promoters, entrepreneurs, and leadership teams to bring clarity to financial decisions, streamline operations, and build sustainable growth pathways.
               </p>
@@ -61,7 +61,7 @@ export function About() {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="group relative flex items-start gap-6 p-7 bg-[#fafaf8]/90 backdrop-blur-sm rounded-xl border border-[#1a3a5c]/8 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
+                className="group relative flex items-start gap-6 p-7 bg-[color:var(--card)] backdrop-blur-sm rounded-xl border border-white/10 hover:border-[#c9a45c]/40 hover:shadow-lg transition-all duration-300"
               >
                 {/* Gold accent line */}
                 <div className="absolute top-0 left-6 right-6 h-0.5 bg-[#c9a45c] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
@@ -69,8 +69,8 @@ export function About() {
                   <item.icon className="h-7 w-7" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1a3a5c] mb-2">{item.title}</h3>
-                  <p className="text-[#1a3a5c]/60">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/70">{item.description}</p>
                 </div>
               </div>
             ))}

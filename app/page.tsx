@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Services } from "@/components/services"
+import { WaveDivider } from "@/components/wave-divider"
 import { Industries } from "@/components/industries"
 import { WhyUs } from "@/components/why-us"
 import { HowWeWork } from "@/components/how-we-work"
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <About />
+      <WaveDivider />
       <Services />
       <Industries />
       <WhyUs />
