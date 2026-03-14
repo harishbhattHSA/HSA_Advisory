@@ -79,8 +79,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/60">
               <li>123 Business Park, Tower A</li>
               <li>Sector 62, Gurugram, Haryana</li>
-              <li className="pt-2">contact@hsacaadvisory.com</li>
-              <li>+91 98765 43210</li>
+              <li className="pt-2">Harish.bhatt@hsacaadvisory.com</li>
+              <li>+91 9958824865</li>
             </ul>
           </div>
         </div>

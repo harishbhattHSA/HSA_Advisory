@@ -15,12 +15,12 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["contact@hsacaadvisory.com", "info@hsacaadvisory.com"],
+    lines: ["Harish.bhatt@hsacaadvisory.com"],
   },
   {
     icon: Phone,
     title: "Phone",
-    lines: ["+91 98765 43210", "+91 11 4567 8900"],
+    lines: ["+91 9958824865"],
   },
   {
     icon: Clock,
